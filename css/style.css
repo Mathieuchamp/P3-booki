@@ -32,6 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1440px;
+    min-width: 320px;
     height: 100%;
     box-sizing: border-box;
     gap: 35px;
@@ -122,11 +123,9 @@ header {
 }
 
 .Buttons a{
+    display: flex;
     width: 100%;
-}
-
-nav :visited{
-    color: #0065FC;
+    color: black;
 }
 
 nav :hover{
@@ -156,7 +155,7 @@ nav :hover{
     Padding:15px 16px 15px 16px;
 }
 
-.bouton-r-icon{
+.bouton-r-icon {
     display: none;
 }
 
@@ -167,9 +166,14 @@ nav :hover{
     justify-content: center;
     height: 100%;
     width: 50px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     background-color: #F2F2F2;
+}
+
+#glasse{
+    background-color: #0065FC;
+    color: white;
 }
 
 .text-ville{
@@ -189,6 +193,7 @@ nav :hover{
     width: 377px;
     flex-direction: row;
     padding-left: 0px;
+    justify-content: space-between;
 }
 
 
@@ -213,6 +218,7 @@ fieldset {
     font-size: 18px;
     font-weight: 700;
     line-height: 21.13px;
+    text-align: left;
 }
 
 
@@ -222,10 +228,11 @@ fieldset {
     gap: 15px;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
-.bouton-filtres{
+
+
+.bouton-filter{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -239,7 +246,7 @@ fieldset {
     Padding:4px 19px 4px 19px;
 }
 
-.bouton-filtres p{
+.bouton-filter p{
     display: flex;
     align-items: center;
     height: 50px;
@@ -251,10 +258,10 @@ fieldset {
     font-size: 17px;
     font-weight: 700;
     line-height: 19.96px;
-    text-align: left;
+    text-align: center;
 }
 
-.bouton-filtres :hover{
+.bouton-filter :hover{
     background-color:#DEEBFF;
 }
 
@@ -515,15 +522,18 @@ ul {
         width: 100%;
     }
 
+    
     .filterbar{
         display: flex;
         flex-direction: column;
         gap:20px;
+        height: auto;
     }
 
     .filterH{
         display: flex;
         text-align: left;
+        margin: 0px;
     }
 
     .Test{
@@ -540,6 +550,7 @@ ul {
         display: flex;
         align-items: center;
     }
+
     }
 
 /* Small devices (phones, less than 768px) */
@@ -560,7 +571,7 @@ ul {
         align-items: center;
     }
 
-    .bouton-filtres{
+    .bouton-filter{
         display: flex;
         flex-wrap: wrap;
     }
@@ -571,23 +582,24 @@ ul {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 0px;
-        gap: 0px;
+        gap: 15px;
     }
 
     .Buttons a{
         width: auto;
         display: flex;
-        justify-content: center;
+        justify-content: center; 
+    }
 
+    Header a :hover{
+        border-bottom: solid 2px #0065FC;
     }
 
     nav :hover{
         border-bottom: solid 2px #0065FC;
         border-top: none;
         border-width: 100%;
-        cursor:auto;
-        Padding:0px, 25px, 0px, 25px;
+        padding:0px 25px 0px 25px;
         color: #0065FC; 
     }
 
@@ -652,7 +664,14 @@ ul {
         margin: 0px;
     }
 
+
+    .text-ville{
+    border: none;
+    }
+
     .recherche{
+        border: 1px solid #F2F2F2;
+        border-radius: 15px;
         width: 100%;
     }
 
@@ -665,37 +684,28 @@ ul {
         border-bottom: solid 2px #F2F2F2;
     }
 
-    .Buttons{
-        gap: 15px;
-        padding: 17px;
-    }
+
 
     .bouton-r-icon{
+        display: flex;
         background-color: #0065FC;
-        width: Hug (49px)px;
-        height: Fixed (49px)px;
-        left: 286px;
+        height: 49px;
+        width: auto;
         padding: 15px 16px 15px 16px;
         gap: 10px;
-        border-radius: 15px 0px 0px 0px;
-        border: 1px 0px 0px 0px;
-        opacity: 0px;
+        border-radius: 15px;
+        border: 1px solid #0065FC;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+        justify-content: right;
     }
 
     .filterbar{
         height: auto;
     }
-
-    .bouton-filtres{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: auto;
-         gap: 20px;
+   
+    .bouton-filter p{
+        width: 35%;
     }
 
-    .filter{
-        width: 100%;
-    }
-    
+   
 }
