@@ -138,17 +138,7 @@ nav :hover{
 
 /****** Body Section Infos***********/
 
-.recherche i{
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 50px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: #F2F2F2;
-}
+
 
 .bouton-r-text{
     height: 100%;
@@ -168,6 +158,18 @@ nav :hover{
 
 .bouton-r-icon{
     display: none;
+}
+
+.recherche i{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #F2F2F2;
 }
 
 .text-ville{
@@ -558,6 +560,11 @@ ul {
         align-items: center;
     }
 
+    .bouton-filtres{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 
     .Buttons{
         width: 100%;
@@ -569,7 +576,7 @@ ul {
     }
 
     .Buttons a{
-        width: 100%;
+        width: auto;
         display: flex;
         justify-content: center;
 
@@ -582,6 +589,10 @@ ul {
         cursor:auto;
         Padding:0px, 25px, 0px, 25px;
         color: #0065FC; 
+    }
+
+    .infosgroup{
+        Padding:0px 20px 0px 20px;
     }
    
     .populaires-cards {
@@ -648,4 +659,43 @@ ul {
     .bouton-r-text{
         display: none;
     }
+
+    Header{
+        height: 100%;
+        border-bottom: solid 2px #F2F2F2;
+    }
+
+    .Buttons{
+        gap: 15px;
+        padding: 17px;
+    }
+
+    .bouton-r-icon{
+        background-color: #0065FC;
+        width: Hug (49px)px;
+        height: Fixed (49px)px;
+        left: 286px;
+        padding: 15px 16px 15px 16px;
+        gap: 10px;
+        border-radius: 15px 0px 0px 0px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+    }
+
+    .filterbar{
+        height: auto;
+    }
+
+    .bouton-filtres{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+         gap: 20px;
+    }
+
+    .filter{
+        width: 100%;
+    }
+    
 }
